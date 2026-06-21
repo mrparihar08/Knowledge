@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #1f2937 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mini-button {
+  border: none;
+  border-radius: 14px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.screen {
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 22px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  overflow: hidden;
+}
+
+.operator-display {
+  min-height: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.display {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  line-height: 1.1;
+}
+
+.display.error {
+  font-size: 34px;
+  color: #fca5a5;
+}
+
+.error-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #fca5a5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 18px;
+  padding: 18px 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.operator {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+.equal {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+  .calculator {
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .display {
+    font-size: 34px;
+  }
+
+  button {
+    padding: 16px 10px;
+    border-radius: 16px;
+  }
+}
